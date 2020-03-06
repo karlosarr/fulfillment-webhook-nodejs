@@ -63,6 +63,6 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(agent.builddirectory)'
-    Contents: '*.zip'
-    TargetFolder: '$(build.artifactstagingdirectory)'
+    SourceFolder: '$(build.artifactstagingdirectory)'
+    Contents: '**'
+    TargetFolder: '$(agent.builddirectory)'
