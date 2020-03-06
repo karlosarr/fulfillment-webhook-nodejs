@@ -1,3 +1,7 @@
+[![Build Status](https://dev.azure.com/karlosarr/fulfillment-webhook-nodejs/_apis/build/status/karlosarr.fulfillment-webhook-nodejs?branchName=master)](https://dev.azure.com/karlosarr/fulfillment-webhook-nodejs/_build/latest?definitionId=7&branchName=master)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=karlosarr_fulfillment-webhook-nodejs&metric=alert_status)](https://sonarcloud.io/dashboard?id=karlosarr_fulfillment-webhook-nodejs)
+
 # Dialogflow Fulfillment Webhook Template for Node.js and Cloud Functions for Firebase
 
 This webhook template sets up everything needed to build fulfillment for your Dialogflow agent.
@@ -12,18 +16,17 @@ Select **only one** of the options below.
 
 ### Option 2: Firebase CLI
 1. Create [Dialogflow Agent](https://console.dialogflow.com/)
-2. `git clone https://github.com/dialogflow/fulfillment-webhook-nodejs.git`
-3. `cd` to the `functions` directory
-4. `npm install`
-5. Install the Firebase CLI by running `npm install -g firebase-tools`
-6. Login with your Google account, `firebase login`
-7. Add your project to the sample with $ `firebase use <project ID>`
+2. `git clone https://github.com/karlosarr/fulfillment-webhook-nodejs.git`
+3. `npm install`
+4. Install the Firebase CLI by running `npm install -g firebase-tools`
+5. Login with your Google account, `firebase login`
+6. Add your project to the sample with $ `firebase use <project ID>`
   + In Dialogflow console under **Settings** ⚙ > **General** tab > copy **Project ID**.
-8. Run `firebase deploy --only functions:dialogflowFirebaseFulfillment`
-9. When successfully deployed, visit the **Project Console** link > **Functions** > **Dashboard**
+7. Run `firebase deploy --only functions:dialogflowFirebaseFulfillment`
+8. When successfully deployed, visit the **Project Console** link > **Functions** > **Dashboard**
   + Copy the link under the events column. For example: `https://us-central1-<PROJECTID>.cloudfunctions.net/<FUNCTIONNAME>`
-10. Back in Dialogflow Console > **Fulfillment** > **Enable** Webhook.
-11. Paste the URL from the Firebase Console’s events column into the **URL** field > **Save**.
+9. Back in Dialogflow Console > **Fulfillment** > **Enable** Webhook.
+10. Paste the URL from the Firebase Console’s events column into the **URL** field > **Save**.
 
 <sup>A.</sup> Powered by Cloud Functions for Firebase
 
