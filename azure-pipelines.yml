@@ -54,9 +54,9 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(build.artifactstagingdirectory)'
+    SourceFolder: '$(agent.builddirectory)'
     Contents: '**'
-    TargetFolder: '$(agent.builddirectory)'
+    TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
