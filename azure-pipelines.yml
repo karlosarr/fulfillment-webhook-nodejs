@@ -43,3 +43,17 @@ steps:
       -Dsonar.host.url=https://sonarcloud.io \
       -Dsonar.login=c9089194d594fb93d66feebac18f8cdf4ec9ff00
   displayName: 'Scanner with SonarQube'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
