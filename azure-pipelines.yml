@@ -46,15 +46,15 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    rootFolderOrFile: '$(agent.builddirectory)'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: '$(agent.builddirectory)/$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(agent.builddirectory)'
+    SourceFolder: '$(Build.ArtifactStagingDirectory)'
     Contents: '*.zip'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
