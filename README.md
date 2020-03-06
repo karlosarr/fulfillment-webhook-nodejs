@@ -1,5 +1,4 @@
 [![Build Status](https://dev.azure.com/karlosarr/fulfillment-webhook-nodejs/_apis/build/status/karlosarr.fulfillment-webhook-nodejs?branchName=master)](https://dev.azure.com/karlosarr/fulfillment-webhook-nodejs/_build/latest?definitionId=7&branchName=master)
-
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=karlosarr_fulfillment-webhook-nodejs&metric=alert_status)](https://sonarcloud.io/dashboard?id=karlosarr_fulfillment-webhook-nodejs)
 
 # Dialogflow Fulfillment Webhook Template for Node.js and Cloud Functions for Firebase
