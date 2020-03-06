@@ -52,17 +52,14 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 
-
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.artifactstagingdirectory)'
+    Contents: '**'
+    TargetFolder: '$(agent.builddirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-
-
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(build.artifactstagingdirectory)'
-    Contents: '**'
-    TargetFolder: '$(agent.builddirectory)'
